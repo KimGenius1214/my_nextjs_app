@@ -1,64 +1,36 @@
-# My Next.js App
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Next.js 14를 사용한 TypeScript, Tailwind CSS, React Query 프로젝트입니다.
+## Getting Started
 
-## 기술 스택
-
-- **Next.js 14.2.5** - 최신 보안 패치가 적용된 버전
-- **TypeScript** - 타입 안정성
-- **Tailwind CSS** - 유틸리티 기반 CSS 프레임워크
-- **React Query (TanStack Query)** - 서버 상태 관리
-
-## 시작하기
-
-### 의존성 설치
-
-```bash
-npm install
-```
-
-### 개발 서버 실행
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 빌드
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```bash
-npm run build
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### 프로덕션 실행
+## Learn More
 
-```bash
-npm start
-```
+To learn more about Next.js, take a look at the following resources:
 
-## 프로젝트 구조
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-my-nextjs-app/
-├── app/
-│   ├── layout.tsx      # 루트 레이아웃
-│   ├── page.tsx        # 홈 페이지
-│   ├── providers.tsx   # React Query Provider
-│   └── globals.css     # 전역 스타일
-├── components/         # 컴포넌트 (생성 필요시)
-├── public/            # 정적 파일
-├── next.config.js     # Next.js 설정
-├── tailwind.config.ts # Tailwind CSS 설정
-└── tsconfig.json      # TypeScript 설정
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 주요 기능
+## Deploy on Vercel
 
-- ✅ Next.js App Router
-- ✅ TypeScript 완전 지원
-- ✅ Tailwind CSS 설정 완료
-- ✅ React Query Provider 설정 완료
-- ✅ 반응형 디자인
-- ✅ 다크 모드 지원 (시스템 설정 기반)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
