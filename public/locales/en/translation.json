@@ -1,0 +1,9 @@
+{
+  "hello": "Hello React Query + i18next!",
+  "change_language": "Change language",
+  "loading": "Loading...",
+  "error": "Failed to load data.",
+  "api_response": "API Response",
+  "env_info": "Set API Base URL with <code>NEXT_PUBLIC_API_BASE_URL</code> env variable."
+}
+

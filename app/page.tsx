@@ -35,16 +35,20 @@
            </button>
          </div>
 
-         <div className="text-sm text-zinc-700 dark:text-zinc-300">
-           {isLoading && <p>React Query 로딩 중...</p>}
-           {isError && <p>데이터를 불러오는 데 실패했습니다.</p>}
-           {data && <p>API 응답: {data.message}</p>}
-         </div>
+        <div className="text-sm text-zinc-700 dark:text-zinc-300">
+          {isLoading && <p>{t("loading")}</p>}
+          {isError && <p>{t("error")}</p>}
+          {data && (
+            <p>
+              {t("api_response")}: {data.message}
+            </p>
+          )}
+        </div>
 
-         <p className="text-xs text-zinc-500">
-           env: <code>NEXT_PUBLIC_API_BASE_URL</code> 값으로 API Base URL을
-           설정합니다.
-         </p>
+        <p
+          className="text-xs text-zinc-500"
+          dangerouslySetInnerHTML={{ __html: t("env_info") }}
+        />
        </main>
      </div>
    );

@@ -1,34 +1,21 @@
- "use client";
+"use client";
 
- import i18next, { InitOptions } from "i18next";
- import { initReactI18next } from "react-i18next";
- import LanguageDetector from "i18next-browser-languagedetector";
- import HttpBackend from "i18next-http-backend";
+import i18next, { InitOptions } from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpBackend from "i18next-http-backend";
 
- const resources = {
-   en: {
-     translation: {
-       hello: "Hello React Query + i18next!",
-       change_language: "Change language",
-     },
-   },
-   ko: {
-     translation: {
-       hello: "React Query + i18next 예제입니다!",
-       change_language: "언어 변경",
-     },
-   },
- };
-
- const options: InitOptions = {
-   fallbackLng: "ko",
-   supportedLngs: ["en", "ko"],
-   debug: process.env.NODE_ENV === "development",
-   interpolation: {
-     escapeValue: false,
-   },
-   resources,
- };
+const options: InitOptions = {
+  fallbackLng: "ko",
+  supportedLngs: ["en", "ko"],
+  debug: process.env.NODE_ENV === "development",
+  interpolation: {
+    escapeValue: false,
+  },
+  backend: {
+    loadPath: "/locales/{{lng}}/{{ns}}.json",
+  },
+};
 
  if (!i18next.isInitialized) {
    i18next
