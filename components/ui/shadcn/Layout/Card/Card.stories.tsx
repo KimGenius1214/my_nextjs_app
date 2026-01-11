@@ -6,8 +6,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "./card";
-import { Button } from "./button";
+} from "./Card";
+import { Button } from "../../Actions/Button/Button";
 
 const meta: Meta<typeof Card> = {
   title: "shadcn/Layout/Card",

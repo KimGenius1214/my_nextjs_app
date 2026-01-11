@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-// shadcn Button 사용
-import { Button } from "./button";
+import { Button } from "./Button";
 import { Download, Heart } from "lucide-react";
 
 const meta: Meta<typeof Button> = {

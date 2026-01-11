@@ -5,7 +5,7 @@
 ### Button
 
 ```tsx
-import { Button } from "@/components/ui/shadcn/button";
+import { Button } from "@/components/ui/shadcn/Actions/Button";
 
 <Button variant="default">Click me</Button>
 <Button variant="outline">Outline</Button>
@@ -24,7 +24,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/components/ui/shadcn/card";
+} from "@/components/ui/shadcn/Layout/Card";
 
 <Card>
   <CardHeader>
@@ -43,7 +43,7 @@ import {
 ### Input
 
 ```tsx
-import { Input } from "@/components/ui/shadcn/input";
+import { Input } from "@/components/ui/shadcn/Forms/Input";
 
 <Input type="email" placeholder="email@example.com" />
 <Input type="password" placeholder="Password" />
@@ -52,7 +52,7 @@ import { Input } from "@/components/ui/shadcn/input";
 ### Textarea
 
 ```tsx
-import { Textarea } from "@/components/ui/shadcn/textarea";
+import { Textarea } from "@/components/ui/shadcn/Forms/Textarea";
 
 <Textarea placeholder="Type your message..." rows={5} />
 ```
@@ -60,7 +60,7 @@ import { Textarea } from "@/components/ui/shadcn/textarea";
 ### Badge
 
 ```tsx
-import { Badge } from "@/components/ui/shadcn/badge";
+import { Badge } from "@/components/ui/shadcn/Feedback/Badge";
 
 <Badge>Default</Badge>
 <Badge variant="secondary">Secondary</Badge>
@@ -71,7 +71,7 @@ import { Badge } from "@/components/ui/shadcn/badge";
 ### Alert
 
 ```tsx
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/shadcn/alert";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/shadcn/Feedback/Alert";
 import { AlertCircle } from "lucide-react";
 
 <Alert>
@@ -86,7 +86,7 @@ import { AlertCircle } from "lucide-react";
 ### Separator
 
 ```tsx
-import { Separator } from "@/components/ui/shadcn/separator";
+import { Separator } from "@/components/ui/shadcn/Layout/Separator";
 
 <Separator />
 <Separator orientation="vertical" />
@@ -95,7 +95,7 @@ import { Separator } from "@/components/ui/shadcn/separator";
 ### Skeleton
 
 ```tsx
-import { Skeleton } from "@/components/ui/shadcn/skeleton";
+import { Skeleton } from "@/components/ui/shadcn/Feedback/Skeleton";
 
 <Skeleton className="h-4 w-[250px]" />
 <Skeleton className="h-12 w-12 rounded-full" />
