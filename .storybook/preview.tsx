@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
+import React from "react";
 import "../app/globals.css";
-import { Providers } from "../app/providers";
+import { StorybookProviders } from "./StorybookProviders";
 
 const preview: Preview = {
   parameters: {
@@ -10,15 +11,14 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    nextjs: {
-      appDirectory: true,
-    },
   },
   decorators: [
     (Story) => (
-      <Providers>
-        <Story />
-      </Providers>
+      <React.StrictMode>
+        <StorybookProviders>
+          <Story />
+        </StorybookProviders>
+      </React.StrictMode>
     ),
   ],
 };
