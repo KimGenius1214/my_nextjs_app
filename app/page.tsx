@@ -2,6 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { useExampleQuery } from "../lib/hooks/useExampleQuery";
+import { Button } from "../components/ui/Button";
 
 export default function Home() {
   const { t, i18n } = useTranslation();
@@ -11,6 +12,8 @@ export default function Home() {
     void i18n.changeLanguage(lng);
   };
 
+  const currentLanguage = i18n.language || "ko";
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center gap-8 py-16 px-6 bg-white dark:bg-black">
@@ -18,22 +21,22 @@ export default function Home() {
           {t("hello")}
         </h1>
 
-         <div className="flex gap-3">
-           <button
-             type="button"
-             onClick={() => changeLanguage("ko")}
-             className="rounded-full border px-4 py-2 text-sm font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800"
-           >
-             한국어
-           </button>
-           <button
-             type="button"
-             onClick={() => changeLanguage("en")}
-             className="rounded-full border px-4 py-2 text-sm font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800"
-           >
-             English
-           </button>
-         </div>
+        <div className="flex gap-3">
+          <Button
+            variant={currentLanguage === "ko" ? "primary" : "outline"}
+            size="md"
+            onClick={() => changeLanguage("ko")}
+          >
+            한국어
+          </Button>
+          <Button
+            variant={currentLanguage === "en" ? "primary" : "outline"}
+            size="md"
+            onClick={() => changeLanguage("en")}
+          >
+            English
+          </Button>
+        </div>
 
         <div className="text-sm text-zinc-700 dark:text-zinc-300">
           {isLoading && <p>{t("loading")}</p>}
