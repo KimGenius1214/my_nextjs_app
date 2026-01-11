@@ -3,7 +3,11 @@ import { mergeConfig } from "vite";
 import path from "path";
 
 const config: StorybookConfig = {
-  stories: ["../app/**/*.stories.@(js|jsx|mjs|ts|tsx)", "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../app/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/ui/shadcn/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/ui/figma/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

@@ -1,127 +1,92 @@
 # UI 컴포넌트 라이브러리
 
-shadcn/ui 기반의 재사용 가능한 컴포넌트들을 관리하는 폴더입니다.
+shadcn/ui와 Figma 디자인 컴포넌트를 관리하는 폴더입니다.
 
-## 사용 가능한 컴포넌트
-
-### shadcn/ui 컴포넌트
-- **Button** (`button.tsx`) - 다양한 variant와 size를 지원하는 버튼
-- **Card** (`card.tsx`) - 카드 컨테이너 컴포넌트
-- **Input** (`input.tsx`) - 텍스트 입력 필드
-- **Textarea** (`textarea.tsx`) - 다중 라인 텍스트 입력
-- **Badge** (`badge.tsx`) - 뱃지/태그 컴포넌트
-- **Alert** (`alert.tsx`) - 알림 메시지 컴포넌트
-- **Separator** (`separator.tsx`) - 구분선 컴포넌트
-- **Skeleton** (`skeleton.tsx`) - 로딩 스켈레톤 컴포넌트
-
-### Figma 컴포넌트
-- **Button** (`Button/Button.tsx`) - Figma에서 디자인된 버튼 컴포넌트
-
-## 구조
+## 폴더 구조
 
 ```
 components/ui/
-  ComponentName/
-    ComponentName.tsx      # 컴포넌트 구현
-    ComponentName.stories.tsx  # Storybook 스토리
-    index.ts               # Export
+├── shadcn/          # shadcn/ui 컴포넌트들
+│   ├── button.tsx
+│   ├── button.stories.tsx
+│   ├── card.tsx
+│   ├── card.stories.tsx
+│   ├── input.tsx
+│   ├── input.stories.tsx
+│   └── ...
+└── figma/           # Figma 디자인 컴포넌트들
+    └── Button/
+        ├── Button.tsx
+        ├── Button.stories.tsx
+        └── index.ts
 ```
+
+## 사용 방법
+
+### shadcn/ui 컴포넌트
+
+```tsx
+import { Button } from "@/components/ui/shadcn/button";
+import { Card } from "@/components/ui/shadcn/card";
+import { Input } from "@/components/ui/shadcn/input";
+```
+
+### Figma 컴포넌트
+
+```tsx
+import { Button } from "@/components/ui/figma/Button/Button";
+```
+
+## 컴포넌트 목록
+
+### shadcn/ui 컴포넌트 (`components/ui/shadcn/`)
+
+- **Button** - shadcn/ui 스타일 버튼
+  - Variants: `default`, `destructive`, `outline`, `secondary`, `ghost`, `link`
+  - Sizes: `default`, `sm`, `lg`, `icon`
+- **Card** - 카드 컨테이너
+- **Input** - 텍스트 입력 필드
+- **Textarea** - 다중 라인 텍스트 입력
+- **Badge** - 뱃지/태그
+- **Alert** - 알림 메시지
+- **Separator** - 구분선
+- **Skeleton** - 로딩 스켈레톤
+
+### Figma 컴포넌트 (`components/ui/figma/`)
+
+- **Button** - Figma 디자인 버튼
+  - Variants: `primary`, `secondary`, `outline`, `ghost`
+  - Sizes: `sm`, `md`, `lg`
+  - Loading state 지원
+
+## Storybook
+
+모든 컴포넌트는 Storybook에서 확인할 수 있습니다:
+
+```bash
+pnpm run storybook
+```
+
+- `shadcn/Button` - shadcn/ui Button
+- `shadcn/Card` - shadcn/ui Card
+- `shadcn/Input` - shadcn/ui Input
+- `Figma/Button` - Figma Button
+- 기타 컴포넌트들
 
 ## 새 컴포넌트 추가하기
 
-### 1. Figma에서 컴포넌트 가져오기
-
-1. Figma에서 컴포넌트 선택
-2. "Figma to Code" 플러그인 실행
-3. React 코드 생성 및 복사
-
-### 2. 컴포넌트 파일 생성
+### shadcn/ui 컴포넌트 추가
 
 ```bash
-mkdir -p components/ui/YourComponent
+# components/ui/shadcn/your-component.tsx
+# components/ui/shadcn/your-component.stories.tsx
 ```
 
-### 3. 컴포넌트 구현
+### Figma 컴포넌트 추가
 
-```tsx
-// components/ui/YourComponent/YourComponent.tsx
-"use client";
-
-import { forwardRef } from "react";
-
-export interface YourComponentProps {
-  // props 정의
-}
-
-export const YourComponent = forwardRef<HTMLDivElement, YourComponentProps>(
-  ({ ...props }, ref) => {
-    return <div ref={ref} {...props}>...</div>;
-  }
-);
-
-YourComponent.displayName = "YourComponent";
+```bash
+# components/ui/figma/YourComponent/
+#   ├── YourComponent.tsx
+#   ├── YourComponent.stories.tsx
+#   └── index.ts
 ```
-
-### 4. Storybook 스토리 작성
-
-```tsx
-// components/ui/YourComponent/YourComponent.stories.tsx
-import type { Meta, StoryObj } from "@storybook/react";
-import { YourComponent } from "./YourComponent";
-
-const meta: Meta<typeof YourComponent> = {
-  title: "Figma/YourComponent",
-  component: YourComponent,
-  parameters: {
-    layout: "centered",
-  },
-  tags: ["autodocs"],
-};
-
-export default meta;
-type Story = StoryObj<typeof YourComponent>;
-
-export const Default: Story = {
-  args: {
-    // 기본 props
-  },
-};
-```
-
-### 5. Export 파일 생성
-
-```tsx
-// components/ui/YourComponent/index.ts
-export { YourComponent } from "./YourComponent";
-export type { YourComponentProps } from "./YourComponent";
-```
-
-## 디자인 토큰 사용
-
-Figma Tokens에서 내보낸 디자인 토큰을 사용하세요:
-
-```tsx
-import tokens from '../../../tokens/figma-tokens.json';
-
-const primaryColor = tokens.colors.primary[600];
-const spacing = tokens.spacing.md;
-```
-
-## 다국어 지원
-
-컴포넌트에서 다국어를 사용하려면:
-
-```tsx
-"use client";
-import { useTranslation } from "react-i18next";
-
-export const YourComponent = () => {
-  const { t } = useTranslation();
-  return <button>{t("button_label")}</button>;
-};
-```
-
-## 테스트
-
-Storybook에서 컴포넌트를 테스트하고, 다양한 상태와 변형을 확인하세요.
-

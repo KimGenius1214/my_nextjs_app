@@ -5,7 +5,7 @@
 ### Button
 
 ```tsx
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/shadcn/button";
 
 <Button variant="default">Click me</Button>
 <Button variant="outline">Outline</Button>
@@ -24,7 +24,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/components/ui/card";
+} from "@/components/ui/shadcn/card";
 
 <Card>
   <CardHeader>
@@ -43,7 +43,7 @@ import {
 ### Input
 
 ```tsx
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/shadcn/input";
 
 <Input type="email" placeholder="email@example.com" />
 <Input type="password" placeholder="Password" />
@@ -52,7 +52,7 @@ import { Input } from "@/components/ui/input";
 ### Textarea
 
 ```tsx
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/components/ui/shadcn/textarea";
 
 <Textarea placeholder="Type your message..." rows={5} />
 ```
@@ -60,7 +60,7 @@ import { Textarea } from "@/components/ui/textarea";
 ### Badge
 
 ```tsx
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/shadcn/badge";
 
 <Badge>Default</Badge>
 <Badge variant="secondary">Secondary</Badge>
@@ -71,7 +71,7 @@ import { Badge } from "@/components/ui/badge";
 ### Alert
 
 ```tsx
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/shadcn/alert";
 import { AlertCircle } from "lucide-react";
 
 <Alert>
@@ -86,7 +86,7 @@ import { AlertCircle } from "lucide-react";
 ### Separator
 
 ```tsx
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/shadcn/separator";
 
 <Separator />
 <Separator orientation="vertical" />
@@ -95,10 +95,27 @@ import { Separator } from "@/components/ui/separator";
 ### Skeleton
 
 ```tsx
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/components/ui/shadcn/skeleton";
 
 <Skeleton className="h-4 w-[250px]" />
 <Skeleton className="h-12 w-12 rounded-full" />
+```
+
+## Figma 컴포넌트
+
+### Button
+
+```tsx
+import { Button } from "@/components/ui/figma/Button/Button";
+
+<Button variant="primary">Click me</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="ghost">Ghost</Button>
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+<Button isLoading>Loading...</Button>
 ```
 
 ## Storybook에서 확인하기
@@ -110,6 +127,8 @@ pnpm run storybook
 ```
 
 브라우저에서 `http://localhost:6006`으로 접속하면:
+
+**shadcn/ui 컴포넌트:**
 - `shadcn/Button` - Button 컴포넌트 스토리
 - `shadcn/Card` - Card 컴포넌트 스토리
 - `shadcn/Input` - Input 컴포넌트 스토리
@@ -118,6 +137,9 @@ pnpm run storybook
 - `shadcn/Alert` - Alert 컴포넌트 스토리
 - `shadcn/Separator` - Separator 컴포넌트 스토리
 - `shadcn/Skeleton` - Skeleton 컴포넌트 스토리
+
+**Figma 컴포넌트:**
+- `Figma/Button` - Figma Button 컴포넌트 스토리
 
 각 컴포넌트의 Docs 탭에서 props와 사용 예제를 확인할 수 있습니다.
 
