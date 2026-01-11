@@ -20,6 +20,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  // GitHub Pages 배포를 위한 base 경로 설정
+  // 리포지토리 이름이 'my_nextjs_app'인 경우: /my_nextjs_app/
+  // 루트에 배포하는 경우: /
+  // 환경 변수로 설정 가능하도록 처리
+  staticDirs: ["../public"],
   typescript: {
     check: false,
     reactDocgen: "react-docgen-typescript",
