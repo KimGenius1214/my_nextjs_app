@@ -128,15 +128,23 @@ pnpm run storybook
 
 브라우저에서 `http://localhost:6006`으로 접속하면:
 
-**shadcn/ui 컴포넌트:**
-- `shadcn/Button` - Button 컴포넌트 스토리
-- `shadcn/Card` - Card 컴포넌트 스토리
-- `shadcn/Input` - Input 컴포넌트 스토리
-- `shadcn/Textarea` - Textarea 컴포넌트 스토리
-- `shadcn/Badge` - Badge 컴포넌트 스토리
-- `shadcn/Alert` - Alert 컴포넌트 스토리
-- `shadcn/Separator` - Separator 컴포넌트 스토리
-- `shadcn/Skeleton` - Skeleton 컴포넌트 스토리
+**shadcn/ui 컴포넌트 (카테고리별):**
+
+**Actions**
+- `shadcn/Actions/Button` - Button 컴포넌트 스토리
+
+**Forms**
+- `shadcn/Forms/Input` - Input 컴포넌트 스토리
+- `shadcn/Forms/Textarea` - Textarea 컴포넌트 스토리
+
+**Layout**
+- `shadcn/Layout/Card` - Card 컴포넌트 스토리
+- `shadcn/Layout/Separator` - Separator 컴포넌트 스토리
+
+**Feedback**
+- `shadcn/Feedback/Alert` - Alert 컴포넌트 스토리
+- `shadcn/Feedback/Badge` - Badge 컴포넌트 스토리
+- `shadcn/Feedback/Skeleton` - Skeleton 컴포넌트 스토리
 
 **Figma 컴포넌트:**
 - `Figma/Button` - Figma Button 컴포넌트 스토리

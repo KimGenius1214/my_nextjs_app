@@ -61,17 +61,33 @@ import { Button } from "@/components/ui/figma/Button/Button";
 
 ## Storybook
 
-모든 컴포넌트는 Storybook에서 확인할 수 있습니다:
+모든 컴포넌트는 Storybook에서 카테고리별로 확인할 수 있습니다:
 
 ```bash
 pnpm run storybook
 ```
 
-- `shadcn/Button` - shadcn/ui Button
-- `shadcn/Card` - shadcn/ui Card
-- `shadcn/Input` - shadcn/ui Input
-- `Figma/Button` - Figma Button
-- 기타 컴포넌트들
+### shadcn/ui 컴포넌트 (카테고리별)
+
+**Actions**
+- `shadcn/Actions/Button` - 버튼 컴포넌트
+
+**Forms**
+- `shadcn/Forms/Input` - 텍스트 입력 필드
+- `shadcn/Forms/Textarea` - 다중 라인 텍스트 입력
+
+**Layout**
+- `shadcn/Layout/Card` - 카드 컨테이너
+- `shadcn/Layout/Separator` - 구분선
+
+**Feedback**
+- `shadcn/Feedback/Alert` - 알림 메시지
+- `shadcn/Feedback/Badge` - 뱃지/태그
+- `shadcn/Feedback/Skeleton` - 로딩 스켈레톤
+
+### Figma 컴포넌트
+
+- `Figma/Button` - Figma 디자인 버튼
 
 ## 새 컴포넌트 추가하기
 

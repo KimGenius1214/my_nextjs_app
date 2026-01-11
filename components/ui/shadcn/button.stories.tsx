@@ -4,7 +4,7 @@ import { Button } from "./button";
 import { Download, Heart } from "lucide-react";
 
 const meta: Meta<typeof Button> = {
-  title: "shadcn/Button",
+  title: "shadcn/Actions/Button",
   component: Button,
   parameters: {
     layout: "centered",

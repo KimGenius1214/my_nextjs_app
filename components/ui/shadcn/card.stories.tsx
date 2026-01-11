@@ -10,7 +10,7 @@ import {
 import { Button } from "./button";
 
 const meta: Meta<typeof Card> = {
-  title: "shadcn/Card",
+  title: "shadcn/Layout/Card",
   component: Card,
   parameters: {
     layout: "centered",
