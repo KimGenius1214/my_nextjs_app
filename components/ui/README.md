@@ -1,6 +1,21 @@
 # UI 컴포넌트 라이브러리
 
-Figma에서 디자인된 컴포넌트들을 관리하는 폴더입니다.
+shadcn/ui 기반의 재사용 가능한 컴포넌트들을 관리하는 폴더입니다.
+
+## 사용 가능한 컴포넌트
+
+### shadcn/ui 컴포넌트
+- **Button** (`button.tsx`) - 다양한 variant와 size를 지원하는 버튼
+- **Card** (`card.tsx`) - 카드 컨테이너 컴포넌트
+- **Input** (`input.tsx`) - 텍스트 입력 필드
+- **Textarea** (`textarea.tsx`) - 다중 라인 텍스트 입력
+- **Badge** (`badge.tsx`) - 뱃지/태그 컴포넌트
+- **Alert** (`alert.tsx`) - 알림 메시지 컴포넌트
+- **Separator** (`separator.tsx`) - 구분선 컴포넌트
+- **Skeleton** (`skeleton.tsx`) - 로딩 스켈레톤 컴포넌트
+
+### Figma 컴포넌트
+- **Button** (`Button/Button.tsx`) - Figma에서 디자인된 버튼 컴포넌트
 
 ## 구조
 

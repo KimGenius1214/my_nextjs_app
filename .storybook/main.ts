@@ -25,11 +25,23 @@ const config: StorybookConfig = {
     },
   },
   async viteFinal(config) {
+    const projectRoot = path.resolve(__dirname, "..");
     return mergeConfig(config, {
       resolve: {
-        alias: {
-          "@": path.resolve(__dirname, "../"),
-        },
+        alias: [
+          {
+            find: "@",
+            replacement: projectRoot,
+          },
+        ],
+      },
+      optimizeDeps: {
+        include: [
+          "class-variance-authority",
+          "clsx",
+          "tailwind-merge",
+          "lucide-react",
+        ],
       },
     });
   },
