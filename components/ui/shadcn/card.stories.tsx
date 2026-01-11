@@ -7,7 +7,7 @@ import {
   CardContent,
   CardFooter,
 } from "./card";
-import { Button } from "../Button";
+import { Button } from "./button";
 
 const meta: Meta<typeof Card> = {
   title: "shadcn/Card",
