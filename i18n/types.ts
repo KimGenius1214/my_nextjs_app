@@ -13,3 +13,4 @@ export type TranslationResources = {
   [key in TranslationKey]: string;
 };
 
+

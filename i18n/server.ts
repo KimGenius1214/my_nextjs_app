@@ -101,3 +101,4 @@ export function detectLanguageFromCookies(
   return DEFAULT_LANGUAGE;
 }
 
+

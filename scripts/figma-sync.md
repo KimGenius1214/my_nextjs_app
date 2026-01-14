@@ -56,3 +56,4 @@ pnpm run figma:sync
 4. **Storybook 작성**: 생성된 컴포넌트에 Storybook 스토리 추가
 5. **통합**: 앱에서 컴포넌트 사용
 
+

@@ -7,3 +7,4 @@ export function isValidLanguage(lng: string): lng is SupportedLanguage {
   return SUPPORTED_LANGUAGES.includes(lng as SupportedLanguage);
 }
 
+

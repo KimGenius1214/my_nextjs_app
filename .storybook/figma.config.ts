@@ -33,3 +33,4 @@ export const figmaConfig = {
   componentsPath: "./components/ui",
 };
 
+
