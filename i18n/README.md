@@ -149,3 +149,4 @@ export type SupportedLanguage = "ko" | "en" | "ja";
 `public/locales/ja/translation.json` 파일을 생성하고 번역을 추가합니다.
 
 
+
